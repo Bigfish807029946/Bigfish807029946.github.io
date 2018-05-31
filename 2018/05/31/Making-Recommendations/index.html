@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>幼儿园老大</title>
+  <title>协作过滤(Making Recommendations) | 幼儿园老大</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="0 机器学习之旅第一步搭建hexo+github个人博客环境 搭建环境需要在电脑中安装git,hexo,购买域名等。然后摸索Markdown语法写第一篇博客。 博客计划记录机器学习中的一些心得和感悟，用作备忘，也希望给同行的小伙伴带来一些帮助，或多或少.当然还会记录其他的东西，比如数学学习笔记，以及一些人生感悟。 计划分组:  算法理解 数学笔记 感悟心得  一堆自言自语而已，谢谢你看到这里。摸索">
+  <meta name="description" content="简介：本文记录了我在阅读《集体智慧编程》一书时候的一些东西，准备入算法的坑，看了一些书觉得印象不深刻，感觉有必要写写博客，主要是加深理解和做笔记用。如果能给读者带来丝毫的帮助当然倍感欣慰。协作过滤协作过滤(Collaborative Filtering)算法：对一大群人经行搜索，从中找出与和我们品味相近的一小群人。算法对这一小群人偏爱的其他内容进行考查，并将其组合起来构造一个进过排序的推荐列表。">
+<meta name="keywords" content="Machine Learning,Collaborative Filtering,Algorithms">
 <meta property="og:type" content="article">
-<meta property="og:title" content="幼儿园老大">
-<meta property="og:url" content="http://yoursite.com/2018/05/28/0/index.html">
+<meta property="og:title" content="协作过滤(Making Recommendations)">
+<meta property="og:url" content="http://yoursite.com/2018/05/31/Making-Recommendations/index.html">
 <meta property="og:site_name" content="幼儿园老大">
-<meta property="og:description" content="0 机器学习之旅第一步搭建hexo+github个人博客环境 搭建环境需要在电脑中安装git,hexo,购买域名等。然后摸索Markdown语法写第一篇博客。 博客计划记录机器学习中的一些心得和感悟，用作备忘，也希望给同行的小伙伴带来一些帮助，或多或少.当然还会记录其他的东西，比如数学学习笔记，以及一些人生感悟。 计划分组:  算法理解 数学笔记 感悟心得  一堆自言自语而已，谢谢你看到这里。摸索">
+<meta property="og:description" content="简介：本文记录了我在阅读《集体智慧编程》一书时候的一些东西，准备入算法的坑，看了一些书觉得印象不深刻，感觉有必要写写博客，主要是加深理解和做笔记用。如果能给读者带来丝毫的帮助当然倍感欣慰。协作过滤协作过滤(Collaborative Filtering)算法：对一大群人经行搜索，从中找出与和我们品味相近的一小群人。算法对这一小群人偏爱的其他内容进行考查，并将其组合起来构造一个进过排序的推荐列表。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-28T16:11:31.285Z">
+<meta property="og:updated_time" content="2018-05-31T15:59:24.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="幼儿园老大">
-<meta name="twitter:description" content="0 机器学习之旅第一步搭建hexo+github个人博客环境 搭建环境需要在电脑中安装git,hexo,购买域名等。然后摸索Markdown语法写第一篇博客。 博客计划记录机器学习中的一些心得和感悟，用作备忘，也希望给同行的小伙伴带来一些帮助，或多或少.当然还会记录其他的东西，比如数学学习笔记，以及一些人生感悟。 计划分组:  算法理解 数学笔记 感悟心得  一堆自言自语而已，谢谢你看到这里。摸索">
+<meta name="twitter:title" content="协作过滤(Making Recommendations)">
+<meta name="twitter:description" content="简介：本文记录了我在阅读《集体智慧编程》一书时候的一些东西，准备入算法的坑，看了一些书觉得印象不深刻，感觉有必要写写博客，主要是加深理解和做笔记用。如果能给读者带来丝毫的帮助当然倍感欣慰。协作过滤协作过滤(Collaborative Filtering)算法：对一大群人经行搜索，从中找出与和我们品味相近的一小群人。算法对这一小群人偏爱的其他内容进行考查，并将其组合起来构造一个进过排序的推荐列表。">
   
     <link rel="alternative" href="/atom.xml" title="幼儿园老大" type="application/atom+xml">
   
@@ -164,22 +165,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-0" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Making-Recommendations" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      协作过滤(Making Recommendations)
+    </h1>
+  
+
+        
+        <a href="/2018/05/31/Making-Recommendations/" class="archive-article-date">
+  	<time datetime="2018-05-31T15:08:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-31</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="0-机器学习之旅第一步"><a href="#0-机器学习之旅第一步" class="headerlink" title="0 机器学习之旅第一步"></a>0 机器学习之旅第一步</h2><p><strong>搭建hexo+github个人博客环境</strong> 搭建环境需要在电脑中安装git,hexo,购买域名等。然后摸索Markdown语法写第一篇博客。</p>
-<h3 id="博客计划"><a href="#博客计划" class="headerlink" title="博客计划"></a>博客计划</h3><p>记录机器学习中的一些心得和感悟，用作备忘，也希望给同行的小伙伴带来一些帮助，或多或少.当然还会记录其他的东西，比如数学学习笔记，以及一些人生感悟。</p>
-<p>计划分组:</p>
+        <h1 id="简介："><a href="#简介：" class="headerlink" title="简介："></a><strong>简介：</strong></h1><h3 id="本文记录了我在阅读《集体智慧编程》一书时候的一些东西，准备入算法的坑，看了一些书觉得印象不深刻，感觉有必要写写博客，主要是加深理解和做笔记用。如果能给读者带来丝毫的帮助当然倍感欣慰。"><a href="#本文记录了我在阅读《集体智慧编程》一书时候的一些东西，准备入算法的坑，看了一些书觉得印象不深刻，感觉有必要写写博客，主要是加深理解和做笔记用。如果能给读者带来丝毫的帮助当然倍感欣慰。" class="headerlink" title="本文记录了我在阅读《集体智慧编程》一书时候的一些东西，准备入算法的坑，看了一些书觉得印象不深刻，感觉有必要写写博客，主要是加深理解和做笔记用。如果能给读者带来丝毫的帮助当然倍感欣慰。"></a>本文记录了我在阅读《集体智慧编程》一书时候的一些东西，准备入算法的坑，看了一些书觉得印象不深刻，感觉有必要写写博客，主要是加深理解和做笔记用。如果能给读者带来丝毫的帮助当然倍感欣慰。</h3><h2 id="协作过滤"><a href="#协作过滤" class="headerlink" title="协作过滤"></a>协作过滤</h2><pre><code>协作过滤(Collaborative Filtering)算法：对一大群人经行搜索，从中找出与和我们品味相近的一小群人。算法对这一小群人偏爱的其他内容进行考查，并将其组合起来构造一个进过排序的推荐列表。
+</code></pre><p>####算法：####</p>
 <ul>
-<li><strong>算法理解</strong></li>
-<li><strong>数学笔记</strong></li>
-<li><strong>感悟心得</strong></li>
+<li><em>欧几里得距离(Euclidean Distance Score)</em> ：以物品数量n为维度，计算用户在n维空间中的坐标点之间欧式距离</li>
+<li><em>皮尔逊相关度(Pearson Correlation Score)</em> ：以两个用户为维度(2维)，计算出物品坐标和最佳拟合直线的相关程度。</li>
+<li><em>Jaccard 系数</em></li>
+<li><em>曼哈顿距离</em><br>####推荐方式：####</li>
+<li><em>基于用户过滤</em> </li>
+<li><em>基于商品过滤</em></li>
 </ul>
-<p>一堆自言自语而已，谢谢你看到这里。摸索了一天也不早了，先睡了，以后长路漫漫，与诸君共勉。</p>
-<p>附上一张图片:</p>
-<iframe height="168" width="300" src="http://5b0988e595225.cdn.sohucs.com/images/20170925/4aa70f4958cb48a3bc0f64c8e72d01c8.gif"></iframe>
+<p>理解：</p>
+<p>。。。。。。未完待续</p>
+
       
 
       
@@ -187,6 +205,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Machine Learning</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Collaborative Filtering</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Algorithms</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -237,7 +274,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/28/0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/31/Making-Recommendations/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -249,20 +286,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2018/05/28/0-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          0
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -284,7 +307,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-机器学习之旅第一步"><span class="toc-number">1.</span> <span class="toc-text">0 机器学习之旅第一步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#博客计划"><span class="toc-number">1.1.</span> <span class="toc-text">博客计划</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介："><span class="toc-number">1.</span> <span class="toc-text">简介：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本文记录了我在阅读《集体智慧编程》一书时候的一些东西，准备入算法的坑，看了一些书觉得印象不深刻，感觉有必要写写博客，主要是加深理解和做笔记用。如果能给读者带来丝毫的帮助当然倍感欣慰。"><span class="toc-number">1.0.1.</span> <span class="toc-text">本文记录了我在阅读《集体智慧编程》一书时候的一些东西，准备入算法的坑，看了一些书觉得印象不深刻，感觉有必要写写博客，主要是加深理解和做笔记用。如果能给读者带来丝毫的帮助当然倍感欣慰。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协作过滤"><span class="toc-number">1.1.</span> <span class="toc-text">协作过滤</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -415,6 +438,18 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Machine Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Collaborative Filtering</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Algorithms</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
